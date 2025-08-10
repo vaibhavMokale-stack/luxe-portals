@@ -28,8 +28,8 @@ const SearchFilters = ({ filters, onFiltersChange, resultCount }: SearchFiltersP
       priceMax: 50000000,
       beds: 0,
       baths: 0,
-      propertyType: '',
-      status: '',
+      propertyType: 'any',
+      status: 'any',
     });
   };
 
@@ -38,8 +38,8 @@ const SearchFilters = ({ filters, onFiltersChange, resultCount }: SearchFiltersP
     filters.priceMax < 50000000 || 
     filters.beds > 0 || 
     filters.baths > 0 || 
-    filters.propertyType || 
-    filters.status;
+    (filters.propertyType && filters.propertyType !== 'any') || 
+    (filters.status && filters.status !== 'any');
 
   return (
     <div className="bg-card border border-border rounded-xl p-6 mb-8">
@@ -156,7 +156,7 @@ const SearchFilters = ({ filters, onFiltersChange, resultCount }: SearchFiltersP
                 <SelectValue placeholder="Any" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Any</SelectItem>
+                <SelectItem value="any">Any</SelectItem>
                 <SelectItem value="Single Family">Single Family</SelectItem>
                 <SelectItem value="Condo">Condo</SelectItem>
                 <SelectItem value="Townhouse">Townhouse</SelectItem>
@@ -174,7 +174,7 @@ const SearchFilters = ({ filters, onFiltersChange, resultCount }: SearchFiltersP
                 <SelectValue placeholder="Any" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Any</SelectItem>
+                <SelectItem value="any">Any</SelectItem>
                 <SelectItem value="For Sale">For Sale</SelectItem>
                 <SelectItem value="For Lease">For Lease</SelectItem>
                 <SelectItem value="Sold">Sold</SelectItem>

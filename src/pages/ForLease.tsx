@@ -11,7 +11,7 @@ const ForLease = () => {
     priceMax: 50000000,
     beds: 0,
     baths: 0,
-    propertyType: '',
+    propertyType: 'any',
     status: 'For Lease',
   });
 
@@ -41,7 +41,7 @@ const ForLease = () => {
         if (filters.baths > 0 && property.baths < filters.baths) return false;
 
         // Property type
-        if (filters.propertyType && property.propertyType !== filters.propertyType) {
+        if (filters.propertyType && filters.propertyType !== 'any' && property.propertyType !== filters.propertyType) {
           return false;
         }
 
