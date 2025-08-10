@@ -8,58 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury real estate design system - light theme */
-    --background: 0 0% 100%;
-    --foreground: 220 13% 9%;
+    /* Luxury real estate design system - quiet luxury */
+    --background: 220 13% 9%;
+    --foreground: 30 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 13% 9%;
+    --card: 220 15% 12%;
+    --card-foreground: 30 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 9%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 30 20% 95%;
 
-    --primary: 45 90% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 90% 70%;
+    --primary-foreground: 220 13% 9%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 13% 9%;
+    --secondary: 220 10% 20%;
+    --secondary-foreground: 30 15% 85%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 8% 46%;
+    --muted: 220 8% 16%;
+    --muted-foreground: 30 8% 60%;
 
-    --accent: 45 65% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 65% 60%;
+    --accent-foreground: 220 13% 9%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 30 20% 95%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 45 90% 55%;
+    --border: 220 8% 20%;
+    --input: 220 8% 16%;
+    --ring: 45 90% 70%;
 
     --radius: 0.75rem;
 
     /* Custom luxury tokens */
-    --gold: 45 90% 55%;
-    --gold-muted: 45 65% 50%;
+    --gold: 45 90% 70%;
+    --gold-muted: 45 65% 60%;
     --charcoal: 220 13% 9%;
-    --charcoal-light: 220 8% 46%;
-    --cream: 0 0% 100%;
-    --cream-muted: 220 14% 96%;
+    --charcoal-light: 220 10% 20%;
+    --cream: 30 20% 95%;
+    --cream-muted: 30 15% 85%;
 
     /* Gradients */
     --gradient-luxury: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-muted)) 100%);
     --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(220 14% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(220 12% 14%) 100%);
 
     /* Shadows */
-    --shadow-luxury: 0 20px 40px -8px rgba(0, 0, 0, 0.1);
-    --shadow-gold: 0 8px 32px -4px rgba(212, 175, 55, 0.15);
-    --shadow-subtle: 0 4px 16px -2px rgba(0, 0, 0, 0.05);
+    --shadow-luxury: 0 20px 40px -8px rgba(0, 0, 0, 0.4);
+    --shadow-gold: 0 8px 32px -4px rgba(255, 206, 84, 0.2);
+    --shadow-subtle: 0 4px 16px -2px rgba(0, 0, 0, 0.1);
 
     /* Typography scale */
     --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Prata', serif;
+    --font-sans: 'Inter', sans-serif;
 
     /* Animations */
     --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

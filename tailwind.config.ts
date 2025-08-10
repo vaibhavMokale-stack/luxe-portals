@@ -19,10 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				serif: ['Playfair Display', 'serif'],
-				sans: ['Prata', 'serif'],
-				prata: ['Prata', 'serif'],
-				playfair: ['Playfair Display', 'serif'],
+				serif: ['var(--font-serif)'],
+				sans: ['var(--font-sans)'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
