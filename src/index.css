@@ -8,35 +8,64 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Luxury real estate design system - quiet luxury */
+    --background: 220 13% 9%;
+    --foreground: 30 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 12%;
+    --card-foreground: 30 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 30 20% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 90% 70%;
+    --primary-foreground: 220 13% 9%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 10% 20%;
+    --secondary-foreground: 30 15% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 8% 16%;
+    --muted-foreground: 30 8% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 65% 60%;
+    --accent-foreground: 220 13% 9%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 30 20% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 8% 20%;
+    --input: 220 8% 16%;
+    --ring: 45 90% 70%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom luxury tokens */
+    --gold: 45 90% 70%;
+    --gold-muted: 45 65% 60%;
+    --charcoal: 220 13% 9%;
+    --charcoal-light: 220 10% 20%;
+    --cream: 30 20% 95%;
+    --cream-muted: 30 15% 85%;
+
+    /* Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-muted)) 100%);
+    --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(220 12% 14%) 100%);
+
+    /* Shadows */
+    --shadow-luxury: 0 20px 40px -8px rgba(0, 0, 0, 0.4);
+    --shadow-gold: 0 8px 32px -4px rgba(255, 206, 84, 0.2);
+    --shadow-subtle: 0 4px 16px -2px rgba(0, 0, 0, 0.1);
+
+    /* Typography scale */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +130,59 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  /* Luxury button variants */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground 
+           font-medium px-8 py-3 rounded-lg transition-all duration-300
+           hover:shadow-[var(--shadow-gold)] hover:scale-105;
+  }
+
+  .btn-ghost-luxury {
+    @apply border border-primary/30 text-foreground bg-transparent
+           px-6 py-2.5 rounded-lg transition-all duration-300
+           hover:bg-primary/10 hover:border-primary/60;
+  }
+
+  /* Property card hover effects */
+  .property-card {
+    @apply transition-all duration-500 hover:scale-[1.02] hover:shadow-[var(--shadow-luxury)];
+  }
+
+  .property-card-overlay {
+    @apply absolute inset-0 bg-black/40 opacity-0 transition-all duration-300
+           hover:opacity-100 flex items-center justify-center;
+  }
+
+  /* Text animations */
+  .fade-in-up {
+    @apply animate-[fadeInUp_0.6s_ease-out_forwards];
+  }
+
+  .stagger-children > * {
+    @apply opacity-0 translate-y-4;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
