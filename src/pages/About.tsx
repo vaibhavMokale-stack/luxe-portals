@@ -54,7 +54,7 @@ const About = () => {
           <div className="relative">
             <div className="aspect-[4/5] bg-gradient-card rounded-2xl overflow-hidden shadow-luxury">
               <img 
-                src="/src/assets/agent-portrait.jpg" 
+                src="/listings/agent-portrait.jpg" 
                 alt="Alexandra Sterling" 
                 className="w-full h-full object-cover"
               />
