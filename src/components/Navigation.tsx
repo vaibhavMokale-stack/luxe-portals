@@ -20,7 +20,7 @@ const Navigation = () => {
     { name: 'Featured Listings', path: '/' },
     { name: 'For Lease', path: '/lease' },
     { name: 'Just Sold', path: '/sold' },
-    { name: 'Meet Alexandra Sterling', path: '/about' },
+    { name: 'Meet Alexandra Baker', path: '/about' },
   ];
 
   return (
