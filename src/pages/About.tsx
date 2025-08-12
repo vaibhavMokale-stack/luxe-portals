@@ -39,7 +39,7 @@ const About = () => {
           <div>
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-foreground">
               Meet
-              <span className="block text-primary">Alexandra Sterling</span>
+              <span className="block text-primary">Alexandra Baker</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Representing Los Angeles' most exceptional properties with uncompromising standards for quality, 
@@ -55,7 +55,7 @@ const About = () => {
             <div className="aspect-[4/5] bg-gradient-card rounded-2xl overflow-hidden shadow-luxury">
               <img 
                 src="/listings/agent-portrait.jpg" 
-                alt="Alexandra Sterling" 
+                alt="Alexandra Baker" 
                 className="w-full h-full object-cover"
               />
             </div>
