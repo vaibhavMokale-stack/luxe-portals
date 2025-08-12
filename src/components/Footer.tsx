@@ -36,7 +36,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>alexandra@sterling-estates.com</span>
+                <span>alexandra@baker-estates.com</span>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
-              <p>© 2024 Alexandra Sterling Real Estate. All rights reserved.</p>
+              <p>© 2024 Alexandra Baker Real Estate. All rights reserved.</p>
               <p className="mt-1">DRE License #01234567 | Equal Housing Opportunity</p>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground">
