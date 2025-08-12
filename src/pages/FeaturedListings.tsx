@@ -67,11 +67,18 @@ const FeaturedListings = () => {
         </div>
 
         {/* Search & Filters */}
-        <SearchFilters 
-          filters={filters}
-          onFiltersChange={setFilters}
-          resultCount={filteredProperties.length}
-        />
+    <div className="max-w-screen-xl mx-auto px-4 overflow-hidden">
+      <div className="rounded-2xl border border-white/10 bg-white/5 p-3 md:p-5">
+        {/* Make SearchFilters a child grid so it stacks on mobile */}
+        <div className="grid gap-3 md:grid-cols-[1fr,auto] md:items-center">
+          <SearchFilters
+            filters={filters}
+            onFiltersChange={setFilters}
+            resultCount={filteredProperties.length}
+          />
+        </div>
+      </div>
+    </div>
 
         {/* Properties Grid */}
         {filteredProperties.length > 0 ? (
